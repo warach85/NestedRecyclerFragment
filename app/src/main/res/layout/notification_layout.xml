@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/notifImage"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="centerInside"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:gravity="center_horizontal"
+            android:text="My Sample title"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center_horizontal"
+            android:text="Sample Text"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

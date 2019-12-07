@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/firstFragment"
+        android:title="Home"
+        android:icon="@drawable/ic_account_balance_black_24dp"/>
+
+    <item android:id="@id/secondFragment"
+        android:title="Browse"
+        android:icon="@drawable/ic_assignment_black_24dp"/>
+
+</menu>
