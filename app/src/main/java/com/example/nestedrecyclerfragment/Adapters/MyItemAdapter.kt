@@ -33,9 +33,9 @@ lateinit var navController:NavController
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.txt_title.setText(itemList!![position].name)
+        holder.txt_title.setText(itemList!!.reversed()[position].name)
 
-        GlideApp.with(context).load(itemList[position].image).into(holder.img_item)
+        GlideApp.with(context).load(itemList.reversed()[position].image).into(holder.img_item)
 
         holder.setClick(object:IItemClickListener{
             override fun onItemClickListener(view: View, position: Int) {
@@ -45,8 +45,8 @@ lateinit var navController:NavController
                 }*/
                 val args = Bundle()
                 //args.putStringArrayList("itemClickKey", arrayListOf("dbImageUrl","desc"))
-                args.putString("dbImageUrl",itemList[position].image)
-                args.putString("desc",itemList[position].name)
+                args.putString("dbImageUrl",itemList.reversed()[position].image)
+                args.putString("desc",itemList.reversed()[position].name)
                 context.findNavController(R.id.my_recycler_view).navigate(R.id.action_firstFragment_to_thirdFragment,args)
                 //context.startActivity(sendIntent)
 
