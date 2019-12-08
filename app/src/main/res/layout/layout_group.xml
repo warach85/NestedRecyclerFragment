@@ -2,17 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    >
 
     <TextView
         android:id="@+id/grpTitle"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="60dp"
         android:layout_gravity="bottom"
         android:fontFamily="monospace"
-        android:gravity="center_vertical"
+        android:gravity="bottom"
         android:paddingLeft="10dp"
         android:shadowColor="@color/colorPrimaryDark"
+        android:text="Aman"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="18sp"
@@ -23,5 +25,13 @@
         android:layout_gravity="center_vertical"
         android:id="@+id/recycler_view_list"
         android:orientation="horizontal"/>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/recycler_view_list"
+        android:layout_marginTop="30dp"
+        android:background="#C5B6B6" />
 
 </LinearLayout>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,14 +8,16 @@
     tools:context=".thirdFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <ImageView
         android:id="@+id/thirdFragImageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:adjustViewBounds="true"/>
     <TextView
         android:id="@+id/thirdFragTextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Third Fragment but first option" />
+        />
 
 </LinearLayout>
