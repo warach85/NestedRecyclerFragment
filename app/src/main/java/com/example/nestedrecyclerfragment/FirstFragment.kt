@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.navigation.NavHostController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -31,6 +32,7 @@ class FirstFragment : Fragment(),IFirebaseLoadListener {
     lateinit var my_recycler_view: RecyclerView
     lateinit var iFirebaseLoadListener: IFirebaseLoadListener
     lateinit var myData: DatabaseReference
+    lateinit var nav_Controller:NavHostController
 
 
     override fun onCreateView(
@@ -41,6 +43,7 @@ class FirstFragment : Fragment(),IFirebaseLoadListener {
 
          val v:View = inflater.inflate(R.layout.fragment_first, container, false)
          my_recycler_view=v.findViewById(R.id.my_recycler_view)
+
 
 
 
@@ -66,7 +69,7 @@ class FirstFragment : Fragment(),IFirebaseLoadListener {
                     val itemGroup = ItemGroup()
                     itemGroup.headerTitle = myDataSnapShot.child("headerTitle")
                         .getValue(true).toString()
-                    val t = object: GenericTypeIndicator<ArrayList<ItemData>>(){}
+                    val t = object:GenericTypeIndicator<HashMap<String,ItemData>>(){}
                     itemGroup.listItem = myDataSnapShot.child("listItem").getValue(t)
                     itemGroups.add(itemGroup)
                 }

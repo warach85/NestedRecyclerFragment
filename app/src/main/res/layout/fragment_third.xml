@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.core.widget.NestedScrollView
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".thirdFragment">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- TODO: Update blank fragment layout -->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            tools:context=".thirdFragment">
 
-    <ImageView
-        android:id="@+id/thirdFragImageView"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:adjustViewBounds="true"/>
-    <TextView
-        android:id="@+id/thirdFragTextView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+            <ImageView
+                android:id="@+id/thirdFragImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/thirdFragTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
 
-</LinearLayout>
+        </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

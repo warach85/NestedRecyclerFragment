@@ -27,14 +27,13 @@ class MyGroupAdapter(private val context: Activity,
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        var items: List<ItemData>? =dataList!![position].listItem
-        val itemListAdapter=MyItemAdapter(context,items)
-        //Log.d("Aman", items!![position].name.toString())
+        var items = dataList!![position].listItem
+        val itemListAdapter=MyItemAdapter(context,items,position)
+
         holder.grpTitle.setText(dataList[position].headerTitle)
         //if(position==0) {holder.recycler_view_list.layoutParams.height=600}
         holder.recycler_view_list.setHasFixedSize(true)
-        holder.recycler_view_list.layoutManager= LinearLayoutManager(context,
-            LinearLayoutManager.HORIZONTAL,false)
+        holder.recycler_view_list.layoutManager= LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
         holder.recycler_view_list.adapter = itemListAdapter
         holder.recycler_view_list.isNestedScrollingEnabled=false
 
