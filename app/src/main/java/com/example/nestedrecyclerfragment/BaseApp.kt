@@ -12,7 +12,7 @@ class BaseApp : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        //region Creating notification channel and Topic Subscription
+        //region Creating notification channel and Topic Subscriptions
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             // Create the NotificationChannel
             val mChannel =  NotificationChannel("MyNotification","MyNotification",
