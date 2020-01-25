@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nestedrecyclerfragment">
+    package="com.example.devnestedrecyclerfragment">
 
     <application
-        android:name=".BaseApp"
+        android:name="com.example.devnestedrecyclerfragment.BaseApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,14 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name="com.example.devnestedrecyclerfragment.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <activity android:name=".ResultActivity"
-            android:parentActivityName=".MainActivity"
+        <activity android:name="com.example.devnestedrecyclerfragment.ResultActivity"
+            android:parentActivityName="com.example.devnestedrecyclerfragment.MainActivity"
             android:launchMode="singleTop"
             android:taskAffinity=""
             android:excludeFromRecents="true">
@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.devnestedrecyclerfragment.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
