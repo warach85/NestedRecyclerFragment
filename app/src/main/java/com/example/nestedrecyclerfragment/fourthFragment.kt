@@ -50,8 +50,8 @@ class fourthFragment : Fragment() {
 
         try {
             //start email intent
-            startActivity(Intent.createChooser(mIntent, "Choose Email Client..."))
-            Toast.makeText(context, "Email Sent", Toast.LENGTH_LONG).show()
+            startActivity(mIntent)
+            //Toast.makeText(context, "Email Sent", Toast.LENGTH_LONG).show()
             etMessage.setText("")
         }
         catch (e: Exception){
