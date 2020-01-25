@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">NestedRecyclerFragment</string>
-
+    <string name="Support_Email">warach85@gmail.com</string>
+    <string name="About_Text">This app is developed to server Sikh community in Western Australia, with details of all events
+                                 and activities taking place locally</string>
+    <string name="User_Query_Text">Please contact us with any queries or information by entering the message below.</string>
     <string name="calender_text">Gurpurab Calender 2020</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Zoom_ImgFrag_Header">Zoom For Details</string>

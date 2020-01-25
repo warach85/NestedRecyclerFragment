@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.fragment_third.*
 
 /**
@@ -41,6 +42,11 @@ class thirdFragment : Fragment() {
 
             thirdFragTextView.setText(descText)
         }
+
+        thirdFragImageView.setOnClickListener(View.OnClickListener {
+            it.findNavController().navigate(R.id.action_thirdFragment_to_touchImageFragment, this.arguments
+            )
+        })
 
         return v
     }

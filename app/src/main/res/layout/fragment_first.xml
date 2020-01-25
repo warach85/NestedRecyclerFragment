@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     android:backgroundTint="#F3EFEF"
     tools:context=".MainActivity">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swpLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
@@ -13,4 +17,5 @@
         android:scrollbars="none"
         android:id="@+id/my_recycler_view"/>
 
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </RelativeLayout>

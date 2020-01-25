@@ -24,10 +24,19 @@
         android:id="@+id/thirdFragment"
         android:name="com.example.nestedrecyclerfragment.thirdFragment"
         android:label="Details"
-        tools:layout="@layout/fragment_third" />
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFragment_to_touchImageFragment"
+            app:destination="@id/touchImageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fourthFragment"
         android:name="com.example.nestedrecyclerfragment.fourthFragment"
         android:label="About"
         tools:layout="@layout/fragment_fourth" />
+    <fragment
+        android:id="@+id/touchImageFragment"
+        android:name="com.example.nestedrecyclerfragment.TouchImageFragment"
+        android:label="fragment_touch_image"
+        tools:layout="@layout/fragment_touch_image" />
 </navigation>

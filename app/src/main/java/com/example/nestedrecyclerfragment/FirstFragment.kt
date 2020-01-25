@@ -14,11 +14,13 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.nestedrecyclerfragment.Adapters.MyGroupAdapter
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_first.*
 
 class FirstFragment : Fragment(),IFirebaseLoadListener {
+    lateinit var varSwpLayout: SwipeRefreshLayout
 
     override fun onFirebaseLoadSuccess(itemGroupList: List<ItemGroup>) {
         val adapter = MyGroupAdapter(activity!!,itemGroupList) // added exclaimation to remove error
@@ -42,10 +44,8 @@ class FirstFragment : Fragment(),IFirebaseLoadListener {
         // Inflate the layout for this fragment
 
          val v:View = inflater.inflate(R.layout.fragment_first, container, false)
+         varSwpLayout = v.findViewById(R.id.swpLayout)
          my_recycler_view=v.findViewById(R.id.my_recycler_view)
-
-
-
 
         myData = FirebaseDatabase.getInstance().getReference("MyData")
         iFirebaseLoadListener = this
@@ -54,6 +54,7 @@ class FirstFragment : Fragment(),IFirebaseLoadListener {
         my_recycler_view.setHasFixedSize(true)
         my_recycler_view.layoutManager = LinearLayoutManager(activity)
 
+        varSwpLayout.setOnRefreshListener { getFireBaseData() }
         getFireBaseData()
 
         return v
@@ -61,8 +62,11 @@ class FirstFragment : Fragment(),IFirebaseLoadListener {
 
 
     private fun getFireBaseData(){
+        varSwpLayout.isRefreshing = true
+
         myData.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
+                varSwpLayout.isRefreshing = false
                 val itemGroups = ArrayList<ItemGroup>()
                 for(myDataSnapShot in p0.children)
                 {
@@ -77,6 +81,7 @@ class FirstFragment : Fragment(),IFirebaseLoadListener {
             }
 
             override fun onCancelled(p0: DatabaseError) {
+                varSwpLayout.isRefreshing = false
                 iFirebaseLoadListener.onFirebaseLoadFailed(p0.message)
             }
 
