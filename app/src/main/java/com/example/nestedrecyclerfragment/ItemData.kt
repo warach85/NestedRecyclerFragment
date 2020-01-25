@@ -11,7 +11,7 @@ class ItemData {
     //Copied below 3 on 17/01/2020
     var frequency:String?=null  // for events without date(regular events)
     var desc:String?=null
-    var textitem:String?=null
+    var title:String?=null
 
     @Exclude
     var date_date: LocalDate?=null // Copied on 17,12,2019

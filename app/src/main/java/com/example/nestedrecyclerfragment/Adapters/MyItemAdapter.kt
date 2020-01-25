@@ -40,6 +40,8 @@ lateinit var navController:NavController
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+
+        holder.txt_title.setText(sortedItemList[position].title)
         holder.txt_date.setText(sortedItemList[position].date)
         holder.txt_freq.setText(sortedItemList[position].frequency)
         holder.txt_venue.setText(sortedItemList[position].venue)
@@ -78,6 +80,8 @@ lateinit var navController:NavController
         var txt_freq:TextView
         var img_item:ImageView
         var txt_venue:TextView
+        var txt_title:TextView
+
         lateinit var iItemClickListener: IItemClickListener
 
         fun setClick(iItemClickListener: IItemClickListener){
@@ -90,6 +94,9 @@ lateinit var navController:NavController
             txt_freq=view.findViewById(R.id.tvFreq)      as TextView
             img_item = view.findViewById(R.id.itemImage) as ImageView
             txt_venue = view.findViewById(R.id.txtVenue) as TextView
+            txt_title = view.findViewById(R.id.tvTitle) as TextView
+
+
 
             view.setOnClickListener(this)
         }

@@ -28,7 +28,13 @@
                 android:maxWidth="300dp"
                 android:maxHeight="300dp"
                 android:scaleType="fitCenter" />
-
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
             <TextView
                 android:id="@+id/tvDate"
                 android:layout_width="match_parent"
