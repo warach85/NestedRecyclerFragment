@@ -34,11 +34,11 @@ class fourthFragment : Fragment() {
         val subject = "Support Email"
         val message = etMessage.text.toString()
 
-        val mIntent = Intent(Intent.ACTION_SEND)
+        val mIntent = Intent(Intent.ACTION_SENDTO)
         /*To send an email you need to specify mailto: as URI using setData() method
         and data type will be to text/plain using setType() method*/
         mIntent.data = Uri.parse("mailto:")
-        mIntent.type = "text/plain"
+        //mIntent.type = "text/plain"
         // put recipient email in intent
         /* recipient is put as array because you may wanna send email to multiple emails
            so enter comma(,) separated emails, it will be stored in array*/
@@ -57,7 +57,7 @@ class fourthFragment : Fragment() {
         catch (e: Exception){
             //if any thing goes wrong for example no email client application or any exception
             //get and show exception message
-            Toast.makeText(context, e.message, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Please contact support with error message:"+ e.message, Toast.LENGTH_LONG).show()
         }
 
 
