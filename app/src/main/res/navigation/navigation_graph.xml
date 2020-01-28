@@ -37,6 +37,6 @@
     <fragment
         android:id="@+id/touchImageFragment"
         android:name="com.example.nestedrecyclerfragment.TouchImageFragment"
-        android:label="fragment_touch_image"
+        android:label="Zoom For Details"
         tools:layout="@layout/fragment_touch_image" />
 </navigation>
