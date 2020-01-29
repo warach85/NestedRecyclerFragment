@@ -27,7 +27,7 @@
                 android:adjustViewBounds="true"
                 android:maxWidth="300dp"
                 android:maxHeight="300dp"
-                android:scaleType="fitCenter" />
+                android:scaleType="centerCrop" />
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
